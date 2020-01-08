@@ -2,6 +2,9 @@ package net.trollyloki.TeamworkChallenges;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import net.trollyloki.TeamworkChallenges.challenges.StayCloseChallenge;
+import net.trollyloki.TeamworkChallenges.commands.TeamworkChallengeCommand;
+
 public class TeamworkChallenges extends JavaPlugin {
 	
 	private static TeamworkChallenges plugin = null;
@@ -25,10 +28,10 @@ public class TeamworkChallenges extends JavaPlugin {
 	
 	private void registerListeners() {
 		getServer().getPluginManager().registerEvents(new StayCloseChallenge(), this);
-		getServer().getPluginManager().registerEvents(new HeadHandsLegsChallenge(), this);
+		//getServer().getPluginManager().registerEvents(new HeadHandsLegsChallenge(), this);
 	}
 	
-	public TeamworkChallenges getPlugin() {
+	public static TeamworkChallenges getPlugin() {
 		return plugin;
 	}
 	
